@@ -33,7 +33,7 @@ namespace TechJobsPersistent.Controllers
         [Route("Employer/Add")]
         public IActionResult ProcessAddEmployerForm(AddEmployerViewModel addEmployerViewModel)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 Employer newEmployer = new Employer()
                 {
