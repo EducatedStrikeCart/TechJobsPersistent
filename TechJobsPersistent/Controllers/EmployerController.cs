@@ -50,9 +50,10 @@ namespace TechJobsPersistent.Controllers
             return View("Add");
         }
 
-        public IActionResult About(Employer employer)
+        public IActionResult About(int id)
         {
-            return View(employer);
+            List<Employer> allEmployers = context.Employers.Where(e => e.Id == id).ToList();
+            return View(allEmployers);
         }
     }
 }
