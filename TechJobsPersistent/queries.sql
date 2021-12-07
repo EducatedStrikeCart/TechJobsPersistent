@@ -9,7 +9,8 @@ FROM Employers as e
 WHERE e.Location = 'St. Louis City';
 
 --Part 3
-SELECT Name, Description
+SELECT Name, Description 
 FROM Skills as s
 INNER JOIN JobSkills as k
 ON k.SkillId = s.Id
+ORDER BY Name ASC
